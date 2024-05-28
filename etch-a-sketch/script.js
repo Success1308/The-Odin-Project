@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded" , () => {
 		}
 	}
 
+	
 	button.addEventListener("click", () => {
 		const promptContainer = document.createElement("div");
 		promptContainer.classList.add("prompt-container");
