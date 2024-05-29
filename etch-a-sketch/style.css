@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: monospace;
 }
 
 body {
@@ -14,11 +15,24 @@ body {
 	background-color: rgba(0, 255, 255, 0.498);
 }
  
+.mainDiv{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.btnContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
          
 .reset {
 	background-image: linear-gradient(to right, #200122 0%, #6f0000  51%, #200122  100%);
 	margin: 10px;
-	padding: 15px 45px;
+	padding: 15px;
 	text-align: center;
 	text-transform: uppercase;
 	transition: 0.5s;
@@ -27,6 +41,8 @@ body {
 	box-shadow: 0 0 20px #eee;
 	border-radius: 10px;
 	display: block;
+	font-size: 1.5em;
+	aspect-ratio: 1/1;
   }
 
   .reset:hover {
@@ -36,6 +52,47 @@ body {
 	cursor: pointer;
   }
  
+.clr{
+	margin: 10px;
+	padding: 15px 45px;
+	text-align: center;
+	aspect-ratio: 1/1;
+	background-size: 100% auto;        
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+.clr:hover {
+	background-position: right center; 
+	color: #ffffffa2;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .red{
+	background-color: rgba(255, 0, 0, 0.75);
+	border: 3px solid #200122;
+  }
+  .green{
+	background-color: rgba(0, 255, 0, 0.49);
+	border: 3px solid #200122;
+  }
+  .blue{
+	background-color: rgba(0, 0, 255, 0.49);
+	border: 3px solid #200122;
+  }
+
+  .red:hover {
+	background-color: rgba(255, 0, 0, 0.95);
+  }
+  .green:hover{
+	background-color: rgba(0, 255, 0, 0.95);
+  }
+  .blue:hover{
+	background-color: rgba(0, 0, 255, 0.95);
+ }
+  
 
 .container{
 	display: flex;
@@ -51,6 +108,7 @@ body {
 }
 
 .square{
+
 	border: 1px dotted black;
 	margin: 0;
 }

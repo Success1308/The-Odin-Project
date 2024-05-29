@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded" , () => {
 
 	const container = document.querySelector(".container");
 	const button = document.querySelector(".reset");
+	const colorButtons = document.querySelectorAll(".clr");
+	let selectedColor = "black"; 
 
 	function createGrid(numSquare){
 		
@@ -10,8 +12,7 @@ document.addEventListener("DOMContentLoaded" , () => {
 		container.innerHTML = "";
 
 		// calculate size of each box
-		const containerWidth = 512 - (2 * 1); 
-		const squareSize =  Math.floor(containerWidth / numSquare);
+		const squareSize = 100 / numSquare;
 
 		// set container width and height
 		container.style.width = `${512}px`;
@@ -20,12 +21,25 @@ document.addEventListener("DOMContentLoaded" , () => {
 		for(let i = 1; i <= numSquare * numSquare ; i++){
 			const square = document.createElement("div");
 			square.classList.add("square");
-			square.style.width = `${squareSize}px`;
-			square.style.height = `${squareSize}px`;
-			square.innerText = `${i}`;
+			square.style.width = `${squareSize}%`;
+			square.style.height = `${squareSize}%`;
+			// square.innerText = `${i}`;
 			container.appendChild(square);
+
+			// Add event listener to change color on click
+			square.addEventListener("click", () => {
+				square.style.backgroundColor = selectedColor;
+			});
 		}
 	}
+	
+
+	colorButtons.forEach(button => {
+		button.addEventListener("click", () => {
+			selectedColor = button.getAttribute("data-color");
+		});
+	});
+
 
 	
 	button.addEventListener("click", () => {
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded" , () => {
 		userInput.classList.add("prompt-input");
 		userInput.type = "number";
 		userInput.min = "1";
-		userInput.max = "100";
+		userInput.max = "60";
 		promptContainer.appendChild(userInput);
 	
 		const confirmButton = document.createElement("button");
