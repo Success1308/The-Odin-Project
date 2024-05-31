@@ -28,6 +28,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* font family */
 
+:root{
+	--primary-color: #060608;
+	--neon-theme: #01DC03;
+}
+
 @font-face {
     font-family: 'odin-font';
     src: url('assets/Norse-Bold.otf') format('opentype');
@@ -37,6 +42,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
 	font-family: 'odin-font', monospace;
+
+
   }
 
 /*  css - body  */
@@ -47,23 +54,85 @@ body {
 	align-items: center;
 	height: 100%;
 	width: 100%;
-	background-color: salmon;
 }
 
 .left{
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1;
+	height: 100vh;
+	width: 40%;
+	background: url('assets/sahil-choubey-sQy22TtbgVA-unsplash.jpg') no-repeat center center / cover;
+	border: 3px solid var(--neon-theme);
+	box-shadow: 0px 4px 8px rgba(24, 211, 86, 0.614); 
+}
+
+.logo{
+	width: 100%; 
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
-	width: 50%;
-	background-color: sandybrown;
+	flex-direction: row;
+	height: 5rem;
+	padding-top: 0.3rem;
+	font-size: 3rem;
+	margin-top: 15rem;
+
+	/* glass */
+	background: rgba(1, 220, 3, 0.55);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(7px);
+	border: 1px solid rgba(1, 220, 3, 1);
 }
+a{
+	text-decoration: none; 
+	color: white;
+}
+.odin-a{
+	text-decoration: none; 
+	color: white;
+	padding-left: 1rem;
+}
+.odin{
+	height: 4.5rem;
+}
+
+.odin-b {
+	padding-left: 0.5rem;
+}
+
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+    margin-top: 20rem;
+	width: 100%; 
+	height: clamp(30px, 2vw, 60px); 
+	text-align: center;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
+	line-height: 0.9rem;
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+	background: rgba(1, 220, 3, 0.55);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(7px);
+	border: 1px solid rgba(1, 220, 3, 1);
+}
+
+
 
 .right{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	width: 50%;
-	background-color: saddlebrown;
+	width: 60%;
+	background-color: var(--primary-color);
 }
+
