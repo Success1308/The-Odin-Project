@@ -64,7 +64,7 @@ body {
 	width: 40%;
 	background: url('assets/sahil-choubey-sQy22TtbgVA-unsplash.jpg') no-repeat center center / cover;
 	border: 3px solid var(--neon-theme);
-	box-shadow: 0px 4px 8px rgba(24, 211, 86, 0.614); 
+	box-shadow: 0px 4px 8px rgba(203, 225, 210, 0.614); 
 }
 
 .logo{
@@ -76,13 +76,13 @@ body {
 	height: 5rem;
 	padding-top: 0.3rem;
 	font-size: 3rem;
-	margin-top: 14rem;
+	margin-top: 15.2rem;
 
 	/* glass */
 	background: rgba(1, 220, 3, 0.55);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(1px);
-	-webkit-backdrop-filter: blur(7px);
+	box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(0.8px);
+	-webkit-backdrop-filter: blur(0.7px);
 	border: 1px solid rgba(1, 220, 3, 1);
 }
 a{
@@ -115,7 +115,7 @@ a{
 	padding-bottom: 0.4rem;
 	line-height: 0.9rem;
 	font-size: 1.1rem;
-	margin-bottom: 2.5rem;
+	margin-bottom: 2.7rem;
 	background: rgba(1, 220, 3, 0.55);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(1px);
@@ -145,9 +145,6 @@ a{
 	background-color: var(--primary-color);
 	font-size: 2.3rem;
 	color: var(--neon-theme);
-	text-shadow: 1px 1px 2px #00FFFF;
-	-webkit-box-shadow:0px 0px 105px 0px rgba(45,255,196,0.42);
-	-moz-box-shadow: 0px 0px 105px 0px rgba(45,255,196,0.42);
 	box-shadow: 0px 0px 105px 0px rgba(45,255,196,0.42);
 
 }
@@ -249,4 +246,71 @@ input{
 	flex-direction: row;
 	color: var(--neon-theme);
 	padding-top: 1.4rem;
+}
+
+
+
+
+
+
+
+
+/* // responsive */@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+	position: relative;
+    height: auto;
+	display: block;
+  }
+  
+  .left {
+    width: 100%;
+	position: relative;
+    order: 1;
+	display: block;
+  }
+  
+  .right {
+	display: block;
+    width: 100%;
+	position: relative;
+    order: 2;
+	font-size: 1.1rem;
+  }
+  .section-1{
+	font-size: 1.7rem;
+	padding: 1.1rem;
+  }
+  .section-1, .section-2, .section-3 {
+    height: auto;
+  }
+  
+  .p-head {
+    font-size: 2rem;
+  }
+  
+  .p-head-2 {
+    font-size: 1rem;
+  }
+  
+  .form-container {
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .container-1, .container-2 {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  input, label {
+    font-size: 1.2rem;
+    width: 100%; 
+  }
+  
+  .button {
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 1.3rem;
+  }
 }
