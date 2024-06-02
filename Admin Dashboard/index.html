@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="style.css">
 	<title>Admin Dashboard</title>
 </head>
@@ -10,37 +11,64 @@
 	
 	<div class="container">
 		<div class="nav-bar">
-			
-			<h2 class="heading"></h2>
-
+			<h2 class="heading"><span class="mdi mdi-view-dashboard"> Dashboard</span></h2>
 			<ul class="nav-list">
-				<li class="main-list"></li>
-				<li class="main-list"></li>
-				<li class="main-list"></li>
-				<li class="main-list"></li>
-				<li class="main-list"></li>
-				<li class="main-list"></li>
+				<li class="main-list"><span class="mdi mdi-home-assistant"> Home</span></li>
+				<li class="main-list"><span class="mdi mdi-account-circle"> Profile</span></li>
+				<li class="main-list"><span class="mdi mdi-message"> Message</span></li>
+				<li class="main-list"><span class="mdi mdi-history"> History</span> </li>
+				<li class="main-list"><span class="mdi mdi-file-document-check"> Tasks</span> </li>
+				<li class="main-list"><span class="mdi mdi-account-group"> Communities</span></li>
 			</ul>
 
 			<ul class="setting">
-				<li class="sub-list"></li>
-				<li class="sub-list"></li>
-				<li class="sub-list"></li>
+				<li class="sub-list"><span class="mdi mdi-cog-outline"> Settings</span></li>
+				<li class="sub-list"><span class="mdi mdi-help-box-multiple"> Support</span></li>
+				<li class="sub-list"><span class="mdi mdi-shield-lock"> Privacy</span></li>
 			</ul>
 		</div>
 	
-		
 		<div class="container-first">
-
+			<ul class="container-list-1">
+				<li class="top-1"><span class="mdi mdi-magnify"></span></li>
+				<li class="top-2"><input id="search" type="text"></li>
+				<li class="top-3"><span class="mdi mdi-bell-ring"></span></li>
+				<li class="top-4"><div><svg class="avatar-circle" style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><path d="M23.90672,8.98959c0,0-4.63137-0.08773-7.86113,0.98481l-1.75372-3.99775l-1.43395,21.60826   l-0.29479,6.82343c-0.03253,0.75259,0.26871,1.48122,0.82318,1.99118l5.89972,5.42607l9.14764,0.19776l6.26961-6.35725   c0.50996-0.51705,0.77572-1.2267,0.73112-1.95155l-1.70993-27.7379l-2.0273,3.95572   C31.69718,9.93237,25.81883,8.91937,23.90672,8.98959z" style="fill:#464747;"/><polygon points="15.9573,21.68759 21.85813,23.89311 16.8473,23.89311  " style="fill:#FFFFFF;"/><polygon points="31.88848,21.68759 25.98774,23.89311 30.99859,23.89311  " style="fill:#FFFFFF;"/><polygon points="14.79179,26.40383 23.84369,29.07452 32.89559,26.40383 31.99749,28.15274    32.61195,35.26663 27.45975,40.20615 20.18036,40.08802 14.98088,35.12481 15.54807,28.12915  " style="fill:#F9D9C0;"/><path d="   M23.90672,8.98959c0,0-4.63137-0.08773-7.86113,0.98481l-1.75372-3.99775l-1.43395,21.60826l-0.29479,6.82343   c-0.03253,0.75259,0.26871,1.48122,0.82318,1.99118l5.89972,5.42607l9.14764,0.19776l6.26961-6.35725   c0.50996-0.51705,0.77572-1.2267,0.73112-1.95155l-1.70993-27.7379l-2.0273,3.95572   C31.69718,9.93237,25.81883,8.91937,23.90672,8.98959z" style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polygon points="   14.79179,26.40383 23.84369,29.07452 32.89559,26.40383 31.99749,28.15274 32.61195,35.26663 27.45975,40.20615 20.18036,40.08802    14.98088,35.12481 15.54807,28.12915  " style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polyline points="   20.07632,32.41357 20.69612,31.86224 27.03761,32.00673 27.69446,32.58709  " style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="23.84854" x2="23.89188" y1="28.8658" y2="26.99893"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="22.47148" x2="25.21589" y1="33.73694" y2="33.86052"/><path d="   M16.04559,9.97439l0.35735,1.1751c0,0,5.23145-0.58506,7.22576-0.39892" style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25.23129" x2="26.74421" y1="10.80374" y2="10.88355"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="23.84369" x2="24.00818" y1="40.14745" y2="37.4563"/></g></svg></div></li>
+				<li class="top-5">Success Ambaliya </li>
+			</ul>
 		</div>
 
 		<div class="container-second">
-
+			<ul class="container-list-2">
+				<li class="top-1"><div><svg class="avatar-circle-1" style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Icons"><path d="M23.90672,8.98959c0,0-4.63137-0.08773-7.86113,0.98481l-1.75372-3.99775l-1.43395,21.60826   l-0.29479,6.82343c-0.03253,0.75259,0.26871,1.48122,0.82318,1.99118l5.89972,5.42607l9.14764,0.19776l6.26961-6.35725   c0.50996-0.51705,0.77572-1.2267,0.73112-1.95155l-1.70993-27.7379l-2.0273,3.95572   C31.69718,9.93237,25.81883,8.91937,23.90672,8.98959z" style="fill:#464747;"/><polygon points="15.9573,21.68759 21.85813,23.89311 16.8473,23.89311  " style="fill:#FFFFFF;"/><polygon points="31.88848,21.68759 25.98774,23.89311 30.99859,23.89311  " style="fill:#FFFFFF;"/><polygon points="14.79179,26.40383 23.84369,29.07452 32.89559,26.40383 31.99749,28.15274    32.61195,35.26663 27.45975,40.20615 20.18036,40.08802 14.98088,35.12481 15.54807,28.12915  " style="fill:#F9D9C0;"/><path d="   M23.90672,8.98959c0,0-4.63137-0.08773-7.86113,0.98481l-1.75372-3.99775l-1.43395,21.60826l-0.29479,6.82343   c-0.03253,0.75259,0.26871,1.48122,0.82318,1.99118l5.89972,5.42607l9.14764,0.19776l6.26961-6.35725   c0.50996-0.51705,0.77572-1.2267,0.73112-1.95155l-1.70993-27.7379l-2.0273,3.95572   C31.69718,9.93237,25.81883,8.91937,23.90672,8.98959z" style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polygon points="   14.79179,26.40383 23.84369,29.07452 32.89559,26.40383 31.99749,28.15274 32.61195,35.26663 27.45975,40.20615 20.18036,40.08802    14.98088,35.12481 15.54807,28.12915  " style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><polyline points="   20.07632,32.41357 20.69612,31.86224 27.03761,32.00673 27.69446,32.58709  " style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="23.84854" x2="23.89188" y1="28.8658" y2="26.99893"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="22.47148" x2="25.21589" y1="33.73694" y2="33.86052"/><path d="   M16.04559,9.97439l0.35735,1.1751c0,0,5.23145-0.58506,7.22576-0.39892" style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="25.23129" x2="26.74421" y1="10.80374" y2="10.88355"/><line style="fill:none;stroke:#303030;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="23.84369" x2="24.00818" y1="40.14745" y2="37.4563"/></g></svg></div></li>
+				<li class="top-2-2">
+					<div>					
+						<div>Hi there,</div>
+						<div>Success Ambaliya (@success1308)</div>
+					</div>
+				</li>
+				<li class="top-3"><button class="nav-btn">New</button></li>
+				<li class="top-4"><button class="nav-btn">Upload</button></li>
+				<li class="top-5"><button class="nav-btn">Share</button></li>
+			</ul>
 		</div>
 
 		<div class="main">
-
 			<div class="project">
+				<div class="title">
+					Your projects :
+				</div>
+
+				<div class="card-1">
+					<h3 class="card-title">Super Cool Project</h3>
+					<p class="card-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam cupiditate laboriosam molestias iste magnam exercitationem!</p>
+					<div class="car-btn">					
+						<button><span class="mdi mdi-star"></span></button>
+						<button><span class="mdi mdi-eye-plus-outline"></span></button>
+						<button><span class="mdi mdi-share-variant"></span></button>
+					</div>
+				</div>
+			
 
 			</div>
 
