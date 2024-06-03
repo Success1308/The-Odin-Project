@@ -277,6 +277,7 @@ body{
 	border-radius: 2rem;
 	position: relative; 
 	border-left: 1rem solid var(--third-color);
+	box-shadow: 6px 7px 37px -8px rgba(0,0,0,0.64);
 }
 .card-para{
 	font-size: 0.8rem;
@@ -319,6 +320,7 @@ body{
 	margin-right: 1rem;
 	font-size: 1rem;
 	border-radius: 1.2rem;
+	box-shadow: 6px 7px 37px -8px rgba(0,0,0,0.64);
 }
 
 
@@ -327,6 +329,7 @@ body{
 	display: grid;
 	grid-template-rows: subgrid;
 	grid-row: span 2;
+	
 }
 .card-para{
 	font-size: 0.8rem;
@@ -345,6 +348,7 @@ body{
 	border-left: 1rem solid var(--third-color);
 	border-radius: 1.2rem;
 	font-size: 1.1rem;
+	box-shadow: 6px 7px 37px -8px rgba(0,0,0,0.64);
 }
 
 .card-2{
@@ -353,6 +357,7 @@ body{
 	justify-content: start;
 	align-items: center;
 	padding: 1rem;
+	box-shadow: 6px 7px 37px -8px var(--fifth-color);
 }
 
 
@@ -412,7 +417,7 @@ body{
     }
     .container-list-1 li, .container-list-2 li {
         margin: 0.5rem 0;
-		display: none;
+	
     }
 
 	#hide{

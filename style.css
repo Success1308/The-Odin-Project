@@ -117,3 +117,103 @@ h1 {
         text-shadow: 0 0 10px #0ff, 0 0 15px #0ff;
     }
 }
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .card {
+        width: 180px;
+        height: 130px;
+        margin: 30px;
+    }
+
+    .card a {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        width: 50px;
+        height: 50px;
+        margin: 2rem;
+    }
+
+    .card a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .card {
+        width: 140px;
+        height: 100px;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .card a {
+        font-size: 1em;
+    }
+
+    .card::before,
+    .card::after {
+        padding: 20px;
+        width: 140px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .card {
+        width: 120px;
+        height: 90px;
+        margin: 2rem;
+        padding: 5px;
+    }
+
+    .card a {
+        font-size: 0.9em;
+    }
+
+    .card::before,
+    .card::after {
+        padding: 15px;
+        width: 120px;
+        height: 90px;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
