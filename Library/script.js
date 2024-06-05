@@ -69,7 +69,7 @@
     const addBook = document.querySelector('.add-book');
     const bookForm = document.querySelector('.sform');
   
-  
+
     addBook.addEventListener('click', () =>{
       bookForm.classList.remove('hide');
       const submitForm = document.querySelector('#submit');
@@ -100,8 +100,11 @@
         if (status === book.bookStatus) {
           bookOption.selected = true;
         }
+
         bookSelect.appendChild(bookOption);
       });
+
+
       
       bookSelect.addEventListener('change', function() {
         book.bookStatus = this.value; 
@@ -128,6 +131,11 @@
 
       
       bookList.appendChild(bookCard);
+
+
+      setTimeout(() => {
+        bookCard.classList.add('appear');
+      }, 10);
 
     });
 

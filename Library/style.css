@@ -143,6 +143,18 @@ body{
     align-items: flex-start;
     overflow: scroll;
     position: relative;
+
+
+    
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+
+.card.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -222,7 +234,25 @@ body{
   inset 0.5em 0 0.5em rgba(0, 0, 0, 0.4), 
   inset -0.5em 0 0.5em rgba(0, 0, 0, 0.4), 
   inset 0 0 0 0.2em #fff;
+
+  animation: slideIn 1s ease forwards; 
 }
+
+.hide{
+  display: none;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 label {
   font-size: 2.5rem; 
@@ -279,67 +309,88 @@ input[type=number] {
 
 
 
-.hide{
-  display: none;
-}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Media query for tablets */
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 1024px) {
   .main {
-    grid-template-columns: repeat(3, 1fr); 
-    
-  }
-  h1{
-    font-size: 2rem;
-  }
-
-  .heading{
-    display: flex;
     flex-direction: column;
+    align-items: center; 
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .heading {
+    height: auto; 
     justify-content: center;
-    height: 30%;
+  }
+  
+  .head {
+    margin: 1rem auto;
+    font-size: 4rem; 
+  }
+  
+  .add-book {
+    margin: 1rem auto; 
+    font-size: 2rem; 
+  }
+  
+  .main {
+    width: 90%; 
+    margin: 1rem auto; 
+    height: 100vh;
+  }
+  
+  .card {
+    width: 90%; 
+  }
+  
+  .sform {
+    width: 90%; 
+    margin: 1rem auto;
+  }
+  .ui{
+    display: none;
+  }
+  .paperOverlay{
+    height: 100vh;
+  }
 }
-}
-
 
 /* Media query for mobile devices */
 @media screen and (max-width: 480px) {
+  .head {
+    font-size: 3rem; 
+  }
+  .add-book {
+    font-size: 1.5rem; 
+  }
+  
   .main {
-    grid-template-columns: repeat(1, 1fr); 
     padding: 1rem; 
-  }
-  h1{
-    font-size: 2.5rem;
-  }
-  
-  .heading{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 30%;
+    height: 100%;
+    flex-direction: column;
   }
   
+  .card {
+    width: 100%; 
+    padding: 2rem; 
+    margin: 1rem 0; 
+    height: 100%;
   }
-
+  
+  .sform {
+    width: 100%; 
+    padding: 1rem; 
+    margin: 1rem 0; 
+  }
+  .ui{
+    display: none;
+  }
+  .paperOverlay{
+    height: 100vh;
+  }
+}
 
 
 
