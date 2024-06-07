@@ -57,10 +57,7 @@ const main = (function () {
 			document.querySelectorAll(".gridbox").forEach(box => {
 				box.textContent = "";				
 			});
-
 		});
-
-
 
 		const gridSelector = document.querySelectorAll(".gridbox");
 		let currentPlayer = playerProfileOne;
@@ -73,7 +70,6 @@ const main = (function () {
 				}	
 				if(element.textContent === ""){
 					element.textContent = `${currentPlayer.marker}`;
-					
 					currentPlayer.move += element.dataset.set;
 
 					if(WIN.winCondition(currentPlayer.move)){
@@ -112,8 +108,6 @@ const main = (function () {
 		const gridSelector = document.querySelectorAll(".gridbox");
 		gridSelector.forEach((element)=>{			
 			element.textContent = ``;
-			playerProfileOne.move = "";
-			playerProfileTwo.move = "";
 			displayStatus.textContent = `Game Started`;
 		});
 	});	
