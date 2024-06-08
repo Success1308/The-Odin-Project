@@ -105,11 +105,11 @@ const main = (function () {
 	const resetTab = document.querySelector(".reset");
 	resetTab.addEventListener('click', (event) => {
 		gameActive = true;
+		playerProfileOne.move = "";
+		playerProfileTwo.move = "";
 		const gridSelector = document.querySelectorAll(".gridbox");
 		gridSelector.forEach((element)=>{			
 			element.textContent = ``;
-			playerOneName.move = "";
-			playerProfileTwo.move = "";
 			displayStatus.textContent = `Game Started`;
 		});
 	});	
