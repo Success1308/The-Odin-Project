@@ -108,6 +108,8 @@ const main = (function () {
 		const gridSelector = document.querySelectorAll(".gridbox");
 		gridSelector.forEach((element)=>{			
 			element.textContent = ``;
+			playerOneName.move = "";
+			playerProfileTwo.move = "";
 			displayStatus.textContent = `Game Started`;
 		});
 	});	
