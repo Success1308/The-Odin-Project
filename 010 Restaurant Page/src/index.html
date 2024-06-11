@@ -2,10 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Restaurant Web Page</title>
 </head>
 <body>
-    <div id="content"></div>
+
+    <header>
+        <nav>
+            <div class="btn-menu">
+                <img src="Assets/logo_transparent.png" id="home-logo" alt="logo">
+                <div class="btn-div">
+                    <button id="home-btn">Home</button>
+                    <button id="menu-btn">Menu</button>
+                    <button id="about-btn">About</button>
+                    <button id="Contact-btn">Contact Us</button>
+                </div>         
+                <div class="right-div">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>            
+        </nav>
+    </header>
+
+    <main id="content">
+
+        <div class="home-content">
+            <section class="hero">
+                <div class="left">
+                    <div class="head">
+                        <span>Spicy BIG</span><br>  
+                        <span>MAC</span>  
+                </div>
+                    <div class="hero-btn-main">
+                        <button class="hero-btn-1"> Start Order <i class="fa-solid fa-arrow-right"></i></button><br> 
+                        <button class="hero-btn-2"> View Menu</button>
+                </div>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i> +1(438)722-9612
+                </div>
+    
+                <div class="c-icon">
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                </div>
+            </section>
+            <section class="second">
+                <div class="second-left">                
+                    <div class="second-left-1">
+                        <div class="second-left-text"> Order Online </div>              
+                        <div class="second-pic-1"></div> 
+                </div>
+                    <div class="second-left-2">
+                        <div class="second-left-text"> Dine In </div>              
+                        <div class="second-pic-1"></div> 
+                </div>
+            </section>
+        </div>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="Assets/logo_transparent.png" alt="Restaurant Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home-btn">Home</a></li>
+                    <li><a href="#menu-btn">Menu</a></li>
+                    <li><a href="#about-btn">About</a></li>
+                    <li><a href="#Contact-btn">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +1(438)722-9612</p>
+                <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> 1234 Street Name, City, Country</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Restaurant. All Assets is just for demo uses </p>
+        </div>
+    </footer>
 </body>
 </html>
