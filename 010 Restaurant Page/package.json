@@ -4,6 +4,7 @@
   "description": "A web Page for a restaurant",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
@@ -15,7 +16,7 @@
   ],
   "author": "Success Ambaliya",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.0",
     "image-webpack-loader": "^8.1.0",
@@ -24,3 +25,4 @@
     "webpack-cli": "^5.1.4"
   }
 }
+
