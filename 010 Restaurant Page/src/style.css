@@ -382,6 +382,7 @@ body{
     grid-template-columns: repeat(7, 1fr);
     gap: 10px; 
 	
+	
 }
 
 .column {
@@ -404,7 +405,10 @@ body{
 	cursor: pointer;
 }
 
-
+.menu-section-main{
+	background-color: #e9b641;
+	color: rgba(33,31,32,255);
+}
 
 
 .menu-section {
@@ -412,7 +416,7 @@ body{
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-	border-top: 2px solid #ebb541;
+	border-top: 2px solid rgba(33,31,32,255);
 	margin-top: 1rem;
 	width: 100vw;
 }
@@ -449,6 +453,9 @@ body{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	
+	background-color: rgba(33,31,32,255);
+	color: #e9b641;
 }
 
 .about-content {
@@ -461,12 +468,15 @@ body{
 .card-main{
 	width: 100%;
 	margin: 2rem;
-	border: 1px solid #ccc;
+	border: 1px solid #e9b641;
 	border-radius: 5px;
 	padding: 2rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s ease-in-out;
 	line-height: 1.5;
+
+	
+	
 }
 
 .card-main >h3 {
@@ -493,10 +503,11 @@ body{
 .sub-card {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #e9b641;
     transition: transform 0.3s ease-in-out;
 	margin: 1.5rem;
 	width: 100%;
+
 }
 
 .sub-card:hover {
@@ -526,6 +537,7 @@ body{
     background-color: #fff;
 	align-items: center;
 	margin: 1rem;
+	background-color: rgba(33,31,32,255);
 }
 
 .sub-card-content h4 {
