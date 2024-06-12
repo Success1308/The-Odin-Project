@@ -1,6 +1,6 @@
 // header.js
 
-export function createHeader() {
+export default function createHeader() {
     const header = document.createElement('header');
     const nav = document.createElement('nav');
     const btnMenuDiv = document.createElement('div');
@@ -27,7 +27,7 @@ export function createHeader() {
     aboutBtn.textContent = 'About';
 
     const contactBtn = document.createElement('button');
-    contactBtn.id = 'Contact-btn';
+    contactBtn.id = 'contact-btn';
     contactBtn.textContent = 'Contact Us';
 
     btnDiv.append(homeBtn, menuBtn, aboutBtn, contactBtn);

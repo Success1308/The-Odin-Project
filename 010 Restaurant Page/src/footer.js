@@ -1,6 +1,6 @@
 // footer.js
 
-export function createFooter() {
+export default function createFooter() {
     const footer = document.createElement('footer');
     footer.className = 'footer';
 
