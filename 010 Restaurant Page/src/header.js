@@ -1,54 +1,58 @@
 // header.js
+import { getRandomQuote } from './quotes.js';
+import Storage from './storage.js'; 
 
-export default function createHeader() {
-    const header = document.createElement('header');
-    const nav = document.createElement('nav');
-    const btnMenuDiv = document.createElement('div');
-    btnMenuDiv.className = 'btn-menu';
+// Function to create the header element
+export function createHeader() {
+	const storage = Storage(); 
 
-    const logoImg = document.createElement('img');
-    logoImg.src = 'Assets/logo_transparent.png';
-    logoImg.id = 'home-logo';
-    logoImg.alt = 'logo';
+    const headerDiv = document.createElement('div');
+    headerDiv.classList.add('header');
 
-    const btnDiv = document.createElement('div');
-    btnDiv.className = 'btn-div';
+    const logoDiv = document.createElement('div');
+    logoDiv.classList.add('header-logo');
+    headerDiv.appendChild(logoDiv);
 
-    const homeBtn = document.createElement('button');
-    homeBtn.id = 'home-btn';
-    homeBtn.textContent = 'Home';
+    const welcomeDiv = document.createElement('div');
+    welcomeDiv.classList.add('header-welcome');
+    const welcomeP = document.createElement('p');
+    welcomeP.classList.add('header-welcome-p');
 
-    const menuBtn = document.createElement('button');
-    menuBtn.id = 'menu-btn';
-    menuBtn.textContent = 'Menu';
+	const userName = storage.getUserName();
+	const currentHour = new Date().getHours();
+	let greeting;
+// greeting
+	if (currentHour >= 5 && currentHour < 12) {
+		greeting = 'Good Morning';
+	} else if (currentHour >= 12 && currentHour < 18) {
+		greeting = 'Good Afternoon';
+	} else {
+		greeting = 'Good Evening';
+	}
+// username
+    if (userName) {
+        welcomeP.textContent = `${greeting}, ${userName}!`;
+    } else {
+        welcomeP.textContent = `${greeting}, Stranger`;
+    }
+    welcomeDiv.appendChild(welcomeP);
+    headerDiv.appendChild(welcomeDiv);
 
-    const aboutBtn = document.createElement('button');
-    aboutBtn.id = 'about-btn';
-    aboutBtn.textContent = 'About';
+    const quoteDiv = document.createElement('div');
+    quoteDiv.classList.add('header-Quote');
+    const quoteP = document.createElement('p');
+    quoteP.classList.add('header-Quote-p');
+    quoteP.textContent = getRandomQuote().split(' - ')[0]; 
+    quoteDiv.appendChild(quoteP);
+    headerDiv.appendChild(quoteDiv);
 
-    const contactBtn = document.createElement('button');
-    contactBtn.id = 'contact-btn';
-    contactBtn.textContent = 'Contact Us';
+    return headerDiv;
+};
 
-    btnDiv.append(homeBtn, menuBtn, aboutBtn, contactBtn);
-
-    const rightDiv = document.createElement('div');
-    rightDiv.className = 'right-div';
-
-    const envelopeIcon = document.createElement('i');
-    envelopeIcon.className = 'fa-solid fa-envelope';
-
-    const searchIcon = document.createElement('i');
-    searchIcon.className = 'fa-solid fa-magnifying-glass';
-
-    const locationIcon = document.createElement('i');
-    locationIcon.className = 'fa-solid fa-location-dot';
-
-    rightDiv.append(envelopeIcon, searchIcon, locationIcon);
-
-    btnMenuDiv.append(logoImg, btnDiv, rightDiv);
-    nav.append(btnMenuDiv);
-    header.append(nav);
-
-    return header;
-}
+// prototype
+// Function to update the quote dynamically
+// export function updateQuote() {
+//     if (quoteP) {
+//         quoteP.textContent = getRandomQuote().split(' - ')[0]; // Update quote content
+//     }
+// }
