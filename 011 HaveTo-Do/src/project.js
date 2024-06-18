@@ -1,12 +1,11 @@
 // project.js
 
-export default function Project(name){
-	const projectName = name;
-	let toDos = []; 
+export default function Project(name) {
+  const projectName = name;
+  let toDos = [];
 
-
-	return {
-		projectName,
-		toDos,
-	}
-};
+  return {
+    projectName,
+    toDos,
+  };
+}

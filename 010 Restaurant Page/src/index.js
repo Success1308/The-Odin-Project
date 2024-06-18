@@ -1,20 +1,38 @@
-// index.js
+import createHomeContent from "../src/home.js";
+import createHeader from "../src/header.js";
+import createFooter from "../src/footer.js";
+import createMenu from "../src/menu.js";
+import ContactUsModule from "../src/contactus.js";
+import createAboutUsSection from "../src/aboutus.js";
 
-import './style.css';
-import Home from './home';
-import Storage from './storage';
-import createLayout from './layout'; 
+document.addEventListener("DOMContentLoaded", () => {
+  const content = document.querySelector("main");
 
+  const header = createHeader();
+  document.body.insertBefore(header, content);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const storage = Storage();
-    const userName = storage.getUserName(); 
-    const body = document.querySelector("body");
-  
-    if (!userName) {
-        Home();
-    } else {
-        body.innerHTML = ``;        
-        body.appendChild(createLayout()); 
-    }
+  const footer = createFooter();
+  document.body.appendChild(footer);
+
+  content.appendChild(createHomeContent());
+
+  document.getElementById("home-btn").addEventListener("click", () => {
+    content.innerHTML = "";
+    content.appendChild(createHomeContent());
+  });
+
+  document.getElementById("about-btn").addEventListener("click", () => {
+    content.innerHTML = "";
+    content.appendChild(createAboutUsSection());
+  });
+
+  document.getElementById("contact-btn").addEventListener("click", () => {
+    content.innerHTML = "";
+    content.appendChild(ContactUsModule());
+  });
+
+  document.getElementById("menu-btn").addEventListener("click", () => {
+    content.innerHTML = "";
+    content.appendChild(createMenu());
+  });
 });

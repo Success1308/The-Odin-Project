@@ -1,72 +1,74 @@
 // home.js
-import Storage from './storage';
-import createLayout from './layout'; 
 
+export default function createHomeContent() {
+  const homeContent = document.createElement("div");
+  homeContent.classList.add("home-content");
 
-const storage = Storage();
-const body = document.querySelector("body");
+  const heroSection = document.createElement("section");
+  heroSection.classList.add("hero");
 
-export default function Home() {
-    const mainContent = document.createElement('main');
-    mainContent.classList.add('home-container');
+  const leftDiv = document.createElement("div");
+  leftDiv.classList.add("left");
 
-    const homeLogo = document.createElement('div');
-    homeLogo.classList.add('home-logo');
-    const logoLink = document.createElement('a');
-    homeLogo.appendChild(logoLink);
+  const headDiv = document.createElement("div");
+  headDiv.classList.add("head");
+  headDiv.innerHTML = "<span>Spicy BIG</span><br><span>MAC</span>";
 
-    const nameLabel = document.createElement('label');
-    nameLabel.setAttribute('for', 'name');
-    nameLabel.classList.add('home-Text');
-    nameLabel.textContent = 'Your Name, Please:';
+  const heroBtnMainDiv = document.createElement("div");
+  heroBtnMainDiv.classList.add("hero-btn-main");
+  const startOrderBtn = document.createElement("button");
+  startOrderBtn.classList.add("hero-btn-1");
+  startOrderBtn.textContent = "Start Order";
+  const viewMenuBtn = document.createElement("button");
+  viewMenuBtn.classList.add("hero-btn-2");
+  viewMenuBtn.textContent = "View Menu";
+  heroBtnMainDiv.append(startOrderBtn, viewMenuBtn);
 
-    const nameInput = document.createElement('input');
-    nameInput.setAttribute('type', 'text');
-    nameInput.setAttribute('id', 'name');
-    nameInput.classList.add('home-input');
+  leftDiv.append(headDiv, heroBtnMainDiv);
 
-    const submitButton = document.createElement('button');
-    submitButton.classList.add('home-btn');
-    submitButton.textContent = 'Submit';
+  const phoneDiv = document.createElement("div");
+  phoneDiv.classList.add("phone");
+  phoneDiv.innerHTML = '<i class="fa-solid fa-phone"></i> +1(438)722-9612';
 
-    // Append elements to main content
-    mainContent.appendChild(homeLogo);
-    mainContent.appendChild(nameLabel);
-    mainContent.appendChild(nameInput);
-    mainContent.appendChild(submitButton);
-
-    // Append main content to the body
-    document.body.appendChild(mainContent);
-
-    // Create custom alert box and add it to the body
-    const customAlertHTML = `
-        <div id="custom-alert" class="custom-alert">
-            <div class="custom-alert-content">
-                <p>Please enter your name.</p>
-                <button id="close-alert">OK</button>
-            </div>
-        </div>
+  const cIconDiv = document.createElement("div");
+  cIconDiv.classList.add("c-icon");
+  cIconDiv.innerHTML = `
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-square-facebook"></i>
     `;
-    document.body.insertAdjacentHTML('beforeend', customAlertHTML);
 
-    const customAlert = document.querySelector('#custom-alert');
-    const closeAlertButton = document.querySelector('#close-alert');
+  heroSection.append(leftDiv, phoneDiv, cIconDiv);
 
-    submitButton.addEventListener('click', () => {
-        const name = nameInput.value.trim();
-        if (name) {
-            storage.saveUserName(name);  
-            body.innerHTML = ``;        
-            body.appendChild(createLayout());       
-        } else {
-            customAlert.style.display = 'block';
-        }
-    });
+  const secondSection = document.createElement("section");
+  secondSection.classList.add("second");
 
-    closeAlertButton.addEventListener('click', () => {
-        customAlert.style.display = 'none';
-    });
+  const secondLeftDiv = document.createElement("div");
+  secondLeftDiv.classList.add("second-left");
 
+  const secondLeft1Div = document.createElement("div");
+  secondLeft1Div.classList.add("second-left-1");
+  const secondLeft1TextDiv = document.createElement("div");
+  secondLeft1TextDiv.classList.add("second-left-text");
+  secondLeft1TextDiv.textContent = "Order Online";
+  const secondPic1Div1 = document.createElement("div");
+  secondPic1Div1.classList.add("second-pic-1");
+  secondLeft1Div.append(secondLeft1TextDiv, secondPic1Div1);
 
-    return mainContent;
+  const secondLeft2Div = document.createElement("div");
+  secondLeft2Div.classList.add("second-left-2");
+  const secondLeft2TextDiv = document.createElement("div");
+  secondLeft2TextDiv.classList.add("second-left-text");
+  secondLeft2TextDiv.textContent = "Order Online";
+  const secondPic1Div2 = document.createElement("div");
+  secondPic1Div2.classList.add("second-pic-1");
+  secondLeft2Div.append(secondLeft2TextDiv, secondPic1Div2);
+
+  secondLeftDiv.append(secondLeft1Div, secondLeft2Div);
+
+  secondSection.appendChild(secondLeftDiv);
+
+  homeContent.append(heroSection, secondSection);
+
+  return homeContent;
 }

@@ -1,74 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-	<link rel="shortcut icon" href="assets/tic-tac-toe (1).ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<link rel="stylesheet" href="style.css">
-	<title>Tic-Tac-Toe</title>
-</head>
-<body>
-	<div class="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montez&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/tic-tac-toe (1).ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="start-game">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="startTheGame">
+          <div class="playerOne">
+            <label for="playerOne">Player One Name : </label>
+            <input id="playerOne" type="text" placeholder="Add Name 1" />
+          </div>
+          <div class="playerTwo">
+            <label for="playerTwo">Player Two Name : </label>
+            <input id="playerTwo" type="text" placeholder="Add Name 2" />
+          </div>
+          <button action="submit" id="submit">Start Game</button>
+        </div>
+      </div>
 
-		<div class="  start-game">
-			<h1>Tic-Tac-Toe</h1>
-			<div class="startTheGame">
-				<div class="playerOne">			
-					<label for="playerOne">Player One Name : </label>
-					<input id="playerOne" type="text" placeholder="Add Name 1">
-				</div>
-				<div class="playerTwo">			
-					<label for="playerTwo">Player Two Name : </label>
-					<input id="playerTwo"  type="text" placeholder="Add Name 2">
-				</div>
-				<button action="submit" id="submit" > Start Game </button>
-			</div>
-		</div>
+      <div class="gameboard-screen hide">
+        <div class="top">
+          <h2>Tic-Tac-Toe</h2>
+          <div class="ins">
+            <i class="fa-solid fa-rotate-right reset"></i>
+            <svg
+              id="restart"
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#FFF"
+                stroke="#000"
+                stroke-width="2"
+                d="m16.24 12 3.18-3.18a1.5 1.5 0 0 0 0-2.12L17.3 4.58a1.5 1.5 0 0 0-2.12 0L12 7.76 8.82 4.58a1.5 1.5 0 0 0-2.12 0L4.58 6.7a1.5 1.5 0 0 0 0 2.12L7.76 12l-3.18 3.18a1.5 1.5 0 0 0 0 2.12l2.12 2.12a1.5 1.5 0 0 0 2.12 0L12 16.24l3.18 3.18a1.5 1.5 0 0 0 2.12 0l2.12-2.12a1.5 1.5 0 0 0 0-2.12L16.24 12Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
 
-		<div class="gameboard-screen hide">
-			<div class="top">
-				<h2>Tic-Tac-Toe</h2>
-				<div class="ins">				
-					<i class="fa-solid fa-rotate-right reset"></i>
-					<svg id="restart" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#FFF" stroke="#000" stroke-width="2" d="m16.24 12 3.18-3.18a1.5 1.5 0 0 0 0-2.12L17.3 4.58a1.5 1.5 0 0 0-2.12 0L12 7.76 8.82 4.58a1.5 1.5 0 0 0-2.12 0L4.58 6.7a1.5 1.5 0 0 0 0 2.12L7.76 12l-3.18 3.18a1.5 1.5 0 0 0 0 2.12l2.12 2.12a1.5 1.5 0 0 0 2.12 0L12 16.24l3.18 3.18a1.5 1.5 0 0 0 2.12 0l2.12-2.12a1.5 1.5 0 0 0 0-2.12L16.24 12Z"></path></svg>
-				</div>
-			</div>
-			
-			
-			<div class="mid ">			
-				<div class="lDiv">
-					<p id="playerOneName"></p> 
-					<p id="scoreOne"></p>
-				</div>
-				<div class="gameBoard">
-					<div class="gridOne gridbox"  data-set="1"></div>
-					<div class="gridTwo gridbox"  data-set="2"></div>
-					<div class="gridThree gridbox"  data-set="3"></div>
-					<div class="gridFour gridbox"  data-set="4"></div>
-					<div class="gridFive gridbox" data-set="5"></div>
-					<div class="gridSix gridbox"  data-set="6"></div>
-					<div class="gridSeven gridbox"  data-set="7"></div>
-					<div class="gridEight gridbox"  data-set="8"></div>
-					<div class="gridNine gridbox "  data-set="9"></div>
-				</div>
-				<div class="rDiv">
-					<p id="playerTwoName"></p>
-					<p id="scoreTwo"></p>
-				</div>
+        <div class="mid">
+          <div class="lDiv">
+            <p id="playerOneName"></p>
+            <p id="scoreOne"></p>
+          </div>
+          <div class="gameBoard">
+            <div class="gridOne gridbox" data-set="1"></div>
+            <div class="gridTwo gridbox" data-set="2"></div>
+            <div class="gridThree gridbox" data-set="3"></div>
+            <div class="gridFour gridbox" data-set="4"></div>
+            <div class="gridFive gridbox" data-set="5"></div>
+            <div class="gridSix gridbox" data-set="6"></div>
+            <div class="gridSeven gridbox" data-set="7"></div>
+            <div class="gridEight gridbox" data-set="8"></div>
+            <div class="gridNine gridbox" data-set="9"></div>
+          </div>
+          <div class="rDiv">
+            <p id="playerTwoName"></p>
+            <p id="scoreTwo"></p>
+          </div>
+        </div>
 
-			</div>
+        <div class="gameDisplay">
+          <p id="gameStatus"></p>
+        </div>
+      </div>
+    </div>
 
-			<div class="gameDisplay"> 
-				<p id="gameStatus"></p>
-			</div>
-
-		</div>
-	</div>
-
-	<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

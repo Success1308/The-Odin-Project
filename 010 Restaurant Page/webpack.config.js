@@ -1,47 +1,37 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
- module.exports = {
-	entry: './src/index.js',
-		mode: "development",
-	output: {
-		filename: 'main.js',
-		path: path.resolve(__dirname, 'dist'),
-		clean: true,
-	}, 
-	devServer: {
-        hot: true,
-    },
-	plugins: [
-		new HtmlWebpackPlugin({
-			title: 'Todo',
-			template: './src/index.html',
-		}),
-		new MiniCssExtractPlugin({
-			filename: 'style.css', 
-		}),
-	], 
-	
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
 
-	module: {
-		rules: [
-			{
-				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader'],
-			},
-			{
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
-				type: 'asset/resource',
-			},
-			{
-				test: /\.(woff|woff2|eot|ttf|otf)$/i,
-				type: 'asset/resource',
-			},
-			{
-				test: /\.ico$/i,
-				type: 'asset/resource'
-			}
-		],
-	},
- };
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Restaurant Web Page",
+      template: "./src/index.html",
+    }),
+  ],
+  mode: "development",
+
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+      },
+    ],
+  },
+};

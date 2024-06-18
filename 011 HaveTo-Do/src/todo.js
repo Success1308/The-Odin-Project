@@ -1,20 +1,19 @@
 // todo.js
 
-export default function ToDo(task, priority){
-	let completed = false;
+export default function ToDo(task, priority) {
+  let completed = false;
 
+  const toggleComplete = () => {
+    completed = !completed;
+  };
 
-	const toggleComplete = () => {
-		completed = !completed;
-	}
+  const createdAt = new Date();
 
-	const createdAt = new Date(); 
-
-	return {
-		task,
-		priority,	
-		completed, 
-		toggleComplete, 
-		createdAt
-	}
-};
+  return {
+    task,
+    priority,
+    completed,
+    toggleComplete,
+    createdAt,
+  };
+}

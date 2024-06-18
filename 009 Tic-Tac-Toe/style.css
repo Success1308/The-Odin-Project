@@ -1,7 +1,8 @@
 /* CSS reset  */
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
@@ -12,519 +13,534 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
-
 
 /* for o and x */
 
 .montez-regular {
-	font-family: "Montez", cursive;
-	font-weight: 400;
-	font-style: normal;
+  font-family: "Montez", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* other Fonts */
 
 @font-face {
-    font-family: 'ThisCafe';
-    src: url('assets/ThisCafe-G3KMP.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "ThisCafe";
+  src: url("assets/ThisCafe-G3KMP.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-body{
-	height: 100vh;
-	width: 100vw;
-	font-family: ThisCafe;
-	font-size: 16px;
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"%3E%3C/path%3E%3C/svg%3E') 0 0, auto;
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: ThisCafe;
+  font-size: 16px;
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    auto;
 }
 
-.main{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
-	background-color: antiquewhite;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
 }
 
-.start-game{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	width: 100vw;
-	background-color: antiquewhite;
+.start-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
 }
 
-h1{
-	font-size: 8rem;
+h1 {
+  font-size: 8rem;
 }
 
-.startTheGame{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	font-size: 3rem;
-
+.startTheGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 3rem;
 }
 
-.playerOne{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center; 
+.playerOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.playerTwo{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center; 
+.playerTwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-input{
-	margin: 2rem;
-	flex: 1; 
-	border-radius: 3rem;
-	padding: 0 0 0 2rem;
-	border: 0.05rem solid black;
-	width: 25rem;
-	font-size: 3rem;
+input {
+  margin: 2rem;
+  flex: 1;
+  border-radius: 3rem;
+  padding: 0 0 0 2rem;
+  border: 0.05rem solid black;
+  width: 25rem;
+  font-size: 3rem;
 }
-
-
 
 input:hover,
-input:focus
- {
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
-
+input:focus {
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    pointer;
 }
 
 label:hover,
-label:focus{
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"%3E%3C/path%3E%3C/svg%3E') 0 0, auto;
+label:focus {
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    auto;
 }
 
-button{
-	margin: 2rem;
-	background-color: whitesmoke;
-	border-radius: 3rem;
-	border: 0.05rem solid black;
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
-	padding: 1rem 2rem;
-	align-self: center;
+button {
+  margin: 2rem;
+  background-color: whitesmoke;
+  border-radius: 3rem;
+  border: 0.05rem solid black;
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    pointer;
+  padding: 1rem 2rem;
+  align-self: center;
 }
 
-button:hover{
-	background-color: antiquewhite;
+button:hover {
+  background-color: antiquewhite;
 }
-
-
 
 /* board */
-.gameboard-screen{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.gameboard-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-h2{
-	font-size: 7rem;
-	margin-top: 2rem;
+h2 {
+  font-size: 7rem;
+  margin-top: 2rem;
 }
 
-.top{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-    width: 100%;
-    padding: 0 2rem;
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
 }
 
-.ins{
-	font-size: 2.8rem;
-	display: flex;
-	gap: 10px;
-	position: absolute;
-	top: 5rem;
-	right: 5rem;
+.ins {
+  font-size: 2.8rem;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
 }
 
-i{
-	margin-right: 2rem;
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
+i {
+  margin-right: 2rem;
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    pointer;
 }
 
-svg{
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
-	background-color: none;
+svg {
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    pointer;
+  background-color: none;
 }
 
-.gameBoard{
-	display: grid;
-	grid-template: repeat(3,1fr) / repeat(3,1fr); 
-	margin-top: 2rem;
+.gameBoard {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  margin-top: 2rem;
 }
 
-
-.gridbox{
-	height: 10rem;
-	width: 10rem;
-	/* background-color: blanchedalmond; */
-	display: flex;
-    justify-content: center; 
-    align-items: center; 
-	font-size: 5rem;
-	font-family: "Montez";
-	font-weight: bold;
-	cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
-    animation: slideIn 1s ease forwards;
+.gridbox {
+  height: 10rem;
+  width: 10rem;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-family: "Montez";
+  font-weight: bold;
+  cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+      0 0,
+    pointer;
+  animation: slideIn 1s ease forwards;
 }
 
-
-.gridOne,.gridFour, .gridSeven,.gridTwo,.gridFive, .gridEight{
-	border-right: 0.5rem solid black;
+.gridOne,
+.gridFour,
+.gridSeven,
+.gridTwo,
+.gridFive,
+.gridEight {
+  border-right: 0.5rem solid black;
 }
 
-.gridFour, .gridFive,.gridSix,.gridSeven, .gridEight, .gridNine{
-	border-top: 0.5rem solid black;
+.gridFour,
+.gridFive,
+.gridSix,
+.gridSeven,
+.gridEight,
+.gridNine {
+  border-top: 0.5rem solid black;
 }
 
-    /* Keyframes for animation */
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    /* Apply animation to the inner content */
-    .gridbox span {
-        position: absolute;
-        animation: fadeIn 1s ease forwards;
-    }
-
-.mid{
-	display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-
+/* Keyframes for animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.lDiv{
-	height: 15rem;
-	width: 25rem;
-	margin-right: 7rem;
-	font-size: 4rem;
-	display: flex;
-	flex-direction: column;
-    justify-content: start ; 
-    align-items: center; 
-	border: 0.1rem solid black;
-	padding: 2rem;
-	border-radius: 3rem;
+/* Apply animation to the inner content */
+.gridbox span {
+  position: absolute;
+  animation: fadeIn 1s ease forwards;
 }
 
-.rDiv{
-	height: 15rem;
-	width: 25rem;
-	margin-left: 7rem;
-	font-size: 4rem;
-	display: flex;
-	flex-direction: column;
-    justify-content: start ; 
-    align-items: center; 
-	border: 0.1rem solid black;
-	padding: 2rem;
-	border-radius: 3rem;
+.mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.gameDisplay{
-	margin-top: 2rem;
-	font-size: 4rem;
-	height: 8rem;
-	width: 90vw;
-	display: flex;
-	flex-direction: row;
-    justify-content: center ; 
-    align-items: center; 
-	border: 0.1rem solid black;
-	padding: 2rem;
-	border-radius: 3rem;
+.lDiv {
+  height: 15rem;
+  width: 25rem;
+  margin-right: 7rem;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border: 0.1rem solid black;
+  padding: 2rem;
+  border-radius: 3rem;
 }
 
+.rDiv {
+  height: 15rem;
+  width: 25rem;
+  margin-left: 7rem;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border: 0.1rem solid black;
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+.gameDisplay {
+  margin-top: 2rem;
+  font-size: 4rem;
+  height: 8rem;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid black;
+  padding: 2rem;
+  border-radius: 3rem;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 393px) {
   /* Adjustments for smaller screens */
 
-  .main{
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	height: 100%;
-	overflow: hidden;
-	padding: 0.5rem;
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: 0.5rem;
   }
   h1 {
     font-size: 3.5rem;
   }
-  
+
   .startTheGame {
-	margin-top: 2rem;
-	display: flex;
-	flex-direction: column;
-	flex: 0.5;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
     font-size: 2rem;
   }
 
-  .playerOne{
-	display: flex;
-	flex-direction: column;
+  .playerOne {
+    display: flex;
+    flex-direction: column;
   }
 
-  .playerTwo{
-	display: flex;
-	flex-direction: column;
+  .playerTwo {
+    display: flex;
+    flex-direction: column;
   }
-  
+
   input {
-	width: 16rem;
+    width: 16rem;
     font-size: 2rem;
   }
-  
-  
- 
-  .gameboard-screen{
-	display: flex;
-	flex-direction: column;
-	font-size: 0.1rem;
-	height: 100%;
-	overflow: scroll;
+
+  .gameboard-screen {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.1rem;
+    height: 100%;
+    overflow: scroll;
   }
   .ins {
     font-size: 2rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: 1rem;
-	right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
   }
 
-  i{
-	margin-right: 0.1rem;
-}
-  
-
-  .mid{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  i {
+    margin-right: 0.1rem;
   }
-  
+
+  .mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .gameBoard {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .top > h2 {
-	font-size: 3.5rem;
-	margin-top: 5rem;
+    font-size: 3.5rem;
+    margin-top: 5rem;
   }
-  
-  .gameBoard{
-	display: grid;
-	margin-top: 0.2rem;
-	
+
+  .gameBoard {
+    display: grid;
+    margin-top: 0.2rem;
   }
   .gridbox {
     height: 5rem;
     width: 5rem;
     font-size: 3rem;
-	
   }
-  
-  .rDiv, .lDiv {
+
+  .rDiv,
+  .lDiv {
     height: 8rem;
     width: 20rem;
     margin: 1rem 4rem;
-	padding: 1rem;
+    padding: 1rem;
     font-size: 2rem;
   }
-  
+
   .gameDisplay {
     margin-top: 0;
     font-size: 1.5rem;
     height: 6rem;
-    width: 17rem; 
+    width: 17rem;
     padding: 1.5rem;
-
   }
-	button{
-		margin: 2rem;
-		background-color: whitesmoke;
-		border-radius: 3rem;
-		border: 0.05rem solid black;
-		cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
-		padding: 1rem 2rem;
-		align-self: center;
-	}
+  button {
+    margin: 2rem;
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    border: 0.05rem solid black;
+    cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+        0 0,
+      pointer;
+    padding: 1rem 2rem;
+    align-self: center;
+  }
 
-	button:hover{
-		background-color: antiquewhite;
-	}
-
-
+  button:hover {
+    background-color: antiquewhite;
+  }
 }
 
 @media only screen and (max-width: 810px) {
-	/* Adjustments for smaller screens */
-  
-	.main{
-	  display: flex;
-	  flex-direction: column;
-	  margin: 0;
-	  height: 100%;
-	  overflow: hidden;
-	  padding: 0.5rem;
-	}
-	h1 {
-	  font-size: 3.5rem;
-	}
-	
-	.startTheGame {
-	  margin-top: 2rem;
-	  display: flex;
-	  flex-direction: column;
-	  flex: 0.5;
-	  font-size: 2rem;
-	}
-  
-	.playerOne{
-	  display: flex;
-	  flex-direction: column;
-	}
-  
-	.playerTwo{
-	  display: flex;
-	  flex-direction: column;
-	}
-	
-	input {
-	  width: 16rem;
-	  font-size: 2rem;
-	}
-	
-	
-	.gameboard-screen{
-	  display: flex;
-	  flex-direction: column;
-	  font-size: 0.1rem;
-	  height: 100%;
-	  overflow: scroll;
-	}
-	.ins {
-	  font-size: 2rem;
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: center;
-	  align-items: center;
-	  position: absolute;
-	  top: 1rem;
-	  right: 2rem;
-	}
-  
-	i{
-	  margin-right: 0.1rem;
+  /* Adjustments for smaller screens */
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: 0.5rem;
   }
-	
-  
-	.mid{
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  align-items: center;
-	}
-	
-	.gameBoard {
-	  display: flex;
-	  flex-direction: column;
-	}
-  
-	.top > h2 {
-	  font-size: 3.5rem;
-	  margin-top: 5rem;
-	}
-	
-	.gameBoard{
-	  display: grid;
-	  margin-top: 0.2rem;
-	  
-	}
-	.gridbox {
-	  height: 5rem;
-	  width: 5rem;
-	  font-size: 3rem;
-	  
-	}
-	
-	.rDiv, .lDiv {
-	  height: 8rem;
-	  width: 20rem;
-	  margin: 1rem 4rem;
-	  padding: 1rem;
-	  font-size: 2rem;
-	}
-	
-	.gameDisplay {
-	  margin-top: 0;
-	  font-size: 1.5rem;
-	  height: 6rem;
-	  width: 17rem; 
-	  padding: 1.5rem;
-  
-	}
-	button{
-		margin: 2rem;
-		background-color: whitesmoke;
-		border-radius: 3rem;
-		border: 0.05rem solid black;
-		cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E') 0 0, pointer;	
-		padding: 1rem 2rem;
-		align-self: center;
-	}
-	
-	button:hover{
-		background-color: antiquewhite;
-	}
-	
-  
+  h1 {
+    font-size: 3.5rem;
   }
-  
 
+  .startTheGame {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    font-size: 2rem;
+  }
 
+  .playerOne {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .playerTwo {
+    display: flex;
+    flex-direction: column;
+  }
 
-.hide{
-	display: none;
+  input {
+    width: 16rem;
+    font-size: 2rem;
+  }
+
+  .gameboard-screen {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.1rem;
+    height: 100%;
+    overflow: scroll;
+  }
+  .ins {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+
+  i {
+    margin-right: 0.1rem;
+  }
+
+  .mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gameBoard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top > h2 {
+    font-size: 3.5rem;
+    margin-top: 5rem;
+  }
+
+  .gameBoard {
+    display: grid;
+    margin-top: 0.2rem;
+  }
+  .gridbox {
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+  }
+
+  .rDiv,
+  .lDiv {
+    height: 8rem;
+    width: 20rem;
+    margin: 1rem 4rem;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .gameDisplay {
+    margin-top: 0;
+    font-size: 1.5rem;
+    height: 6rem;
+    width: 17rem;
+    padding: 1.5rem;
+  }
+  button {
+    margin: 2rem;
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    border: 0.05rem solid black;
+    cursor: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"%3E%3Cpath fill="%23FFF" stroke="%23000" stroke-width="2" stroke-linejoin="round" d="M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z"%3E%3C/path%3E%3C/svg%3E')
+        0 0,
+      pointer;
+    padding: 1rem 2rem;
+    align-self: center;
+  }
+
+  button:hover {
+    background-color: antiquewhite;
+  }
+}
+
+.hide {
+  display: none;
 }

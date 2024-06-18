@@ -110,8 +110,7 @@ body {
   text-decoration: none;
 }
 
-#Success-link: active,
-      #Success-link:hover {
+#Success-link:active #Success-link:hover {
   color: MediumSeaGreen;
   text-decoration: none;
   filter: drop-shadow(4px 4px 20px #40e0d0);
