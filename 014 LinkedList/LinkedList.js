@@ -1,5 +1,5 @@
 // LinkedList.js
-import { Node } from "../Node.js";
+import { Node } from "./node.js";
 
 export class LinkedList {
   constructor() {
