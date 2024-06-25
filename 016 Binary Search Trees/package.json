@@ -1,0 +1,14 @@
+{
+  "name": "016-binary-search-trees",
+  "version": "1.0.0",
+  "main": "Node.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
