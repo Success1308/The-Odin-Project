@@ -1,7 +1,5 @@
 // Iterative Approach
 
-// First, let's create a function fibs that generates the Fibonacci sequence using iteration:
-
 function fibs(n) {
   let sequence = [];
   if (n >= 1) {
@@ -21,8 +19,6 @@ console.log(fibs(8)); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
 
 // Recursive Approach
 
-// Now, let's implement the recursive version fibsRec to generate the Fibonacci sequence:
-
 function fibsRec(n) {
   if (n === 1) {
     return [0];
@@ -41,8 +37,6 @@ function fibsRec(n) {
 console.log(fibsRec(8)); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
 
 // Testing Both Functions
-
-// Let's test both functions with various inputs:
 
 console.log(fibs(1)); // Output: [0]
 console.log(fibs(2)); // Output: [0, 1]
