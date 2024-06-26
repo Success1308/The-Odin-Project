@@ -49,7 +49,6 @@ function knightMoves(start, end) {
     }
   }
 
-  // If no path found (should not reach here given problem constraints)
   return null;
 }
 
