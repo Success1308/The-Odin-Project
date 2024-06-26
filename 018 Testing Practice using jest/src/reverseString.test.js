@@ -41,7 +41,7 @@ test("String with leading and trailing spaces", () => {
 });
 
 test("String with non-string input (number)", () => {
-  expect(reverseString(123)).toBe(""); // Handle non-string input gracefully
+  expect(reverseString(123)).toBe("");
 });
 
 test("String with non-string input (object)", () => {
@@ -55,5 +55,3 @@ test("String with null input", () => {
 test("String with undefined input", () => {
   expect(reverseString(undefined)).toBe("");
 });
-
-// Add more tests as needed
