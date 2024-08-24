@@ -6,6 +6,7 @@ const generateRandomArray = (size, max = 100) => {
   return Array.from({ length: size }, () => Math.floor(Math.random() * max));
 };
 
+
 // Driver script
 const main = () => {
   // Create a binary search tree from an array of random numbers < 100
